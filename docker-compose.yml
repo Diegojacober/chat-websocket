@@ -4,10 +4,10 @@ services:
   mongo:
     image: mongo:latest
     container_name: mongo_db
-    ports:
-      - 27017:27017
     volumes:
       - mongo:/data
+    ports:
+      - 27017:27017
     environment:
       - MONGO_INITDB_ROOT_USERNAME=diego
       - MONGO_INITDB_ROOT_PASSWORD=123456
@@ -35,7 +35,7 @@ services:
       - spring-mongo-net
 
 volumes:
-  mongo:
+  mongo: {}
 
 networks:
   spring-mongo-net:

@@ -27,6 +27,7 @@ public class ChatController {
     @Autowired
     private ChatMessageService chatMessageService;
 
+    @SuppressWarnings("null")
     @MessageMapping("/chat")
     public void processMessage(@Payload ChatMessage chatMessage) {
         ChatMessage savedMsg = chatMessageService.save(chatMessage);

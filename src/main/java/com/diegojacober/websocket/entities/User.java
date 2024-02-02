@@ -11,7 +11,7 @@ import lombok.Setter;
 @Document
 public class User {
     @Id
-    private String nickname;
-    private String fullname;
+    private String nickName;
+    private String fullName;
     private Status status;
 }
